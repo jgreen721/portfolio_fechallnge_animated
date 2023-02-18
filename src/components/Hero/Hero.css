@@ -1,0 +1,177 @@
+.hero {
+  margin-bottom: 6rem;
+  height: 72rem;
+  /* border: 2px solid red; */
+  position: relative;
+  overflow: hidden;
+
+  /* border: 2px dotted red; */
+}
+
+/* .desktop {
+  display: block;
+} */
+
+.mobile {
+  display: none;
+}
+
+.hero-col:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 65%;
+}
+
+.hero-card {
+  /* position: relative; */
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+}
+
+.hero-h1 {
+  font-size: 8.9rem;
+  margin-bottom: 4.3rem;
+
+  max-width: 70.9rem;
+  letter-spacing: -2.5px;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: var(--mintgreen);
+  height: 4px;
+  animation: grow 1s forwards;
+}
+
+@keyframes grow {
+  100% {
+    width: 100%;
+  }
+}
+
+.hero-blurb {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 500;
+  max-width: 44.5rem;
+}
+
+.profile-img-div {
+  height: 72rem;
+  width: 44.5rem;
+  position: absolute;
+  top: 0;
+  right: 0rem;
+}
+
+.profile-img {
+  height: 100%;
+}
+.circle {
+  position: absolute;
+  left: -6.4rem;
+  bottom: 5rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .hero {
+    /* border: 2px solid red; */
+    height: auto;
+    height: 54.9rem;
+    /* height: 60rem; */
+  }
+  .profile-img-div {
+    height: 60rem;
+    width: 32.2rem;
+    /* border: 3px solid blue; */
+  }
+
+  .circle {
+    right: -8.4rem;
+    bottom: 1rem;
+    left: auto;
+  }
+
+  .hero-card {
+    width: 44.5rem;
+  }
+  .hero-h1 {
+    font-size: 7.2rem;
+  }
+}
+@media screen and (max-width: 625px) {
+  .mobile {
+    display: block;
+    height: 38.3rem;
+    height: 100%;
+    /* width: 17.4rem; */
+    width: 100%;
+    /* border: 2px solid red; */
+    text-align: center;
+    /* position: relative; */
+  }
+  .desktop {
+    display: none;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+    /* border: 4px solid orange; */
+  }
+
+  .hero-col,
+  .hero-col:first-child {
+    /* border: 3px solid olivedrab; */
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-col:first-child {
+    width: 100%;
+  }
+
+  .hero-card {
+    /* position: absolute; */
+    /* top: 42.3rem; */
+    /* left: 0; */
+    text-align: center;
+    position: relative;
+    /* border: 5px solid red; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin: 0 1.6rem; */
+    /* top: 15rem; */
+    /* transform: translateY(45rem); */
+  }
+  /* .profile-img-div {
+    border: none;
+  } */
+
+  .hero-h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    max-width: none;
+  }
+
+  .hero-blurb {
+    margin: 2rem;
+  }
+}
