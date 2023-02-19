@@ -11,20 +11,20 @@ import {motion} from "framer-motion";
 
 function App() {
   const [dev,setDev] = useState("Justin Green")
-  const [hasAsked,setHasAsked] = useState(false)
 
 
   useEffect(()=>{
-    if(!hasAsked){
-    let devName = prompt("Care to personalize with your own name? Just enter it here! :)\n FYI, we have some character limit(18 char) to our buffer so dont get too cute here!");
+    setTimeout(()=>{
+      let devName = prompt("Care to personalize with your own name? Just enter it here! :)\n FYI, we have some character limit(18 char) to our buffer so dont get too cute here!");
     if(devName.length > 18){
       setDev("Funny Guy")
     }
     else{
     setDev(devName);
     }
-    setHasAsked(true)
-    }
+    },2000);
+
+    return ()=>clearTimeout();
   },[])
 
   return (
