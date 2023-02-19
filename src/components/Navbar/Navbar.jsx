@@ -4,10 +4,10 @@ import {motion} from "framer-motion"
 import "./Navbar.css"
 
 
-const Navbar = () => {
+const Navbar = ({dev}) => {
   return (
     <nav>
-        <motion.h3 initial={{opacity:0}} animate={{opacity:1,transition:{duration:1.5,delay:1}}} className="nav-header">adamkeyes</motion.h3>
+        <motion.h3 initial={{opacity:0}} animate={{opacity:1,transition:{duration:1.5,delay:1}}} className="nav-header">{dev}</motion.h3>
         <ul className="nav-links">
             <li className="nav-item">
                 <a className="nav-link" href="http://www.github.com/jgreen721" target="_blank">

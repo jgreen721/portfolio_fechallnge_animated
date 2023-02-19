@@ -1,10 +1,10 @@
 import React from 'react'
 import {github,twitter,frontEndMentor,linkedIn} from "../../const.js"
 import "./Footer.css"
-const Footer = () => {
+const Footer = ({dev}) => {
   return (
     <footer>
-        <h3 className="footer-header">adamkeyes</h3>
+        <h3 className="footer-header">{dev}</h3>
         <ul className="footer-links">
             <li className="footer-item">
                 <a className="footer-link" href="http://www.github.com/jgreen721" target="_blank">

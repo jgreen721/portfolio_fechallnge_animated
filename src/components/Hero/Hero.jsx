@@ -23,7 +23,7 @@ const icon = {
 
 
 
-const Hero = () => {
+const Hero = ({dev}) => {
   return (
     <div className="hero">
       <div className="hero-col">
@@ -38,7 +38,7 @@ const Hero = () => {
       </div>
         <div className="hero-col">
             <div className="hero-card">
-                <h1 className="hero-h1">Nice to meet you! I'm <span className="underline">Adam Keyes</span>.</h1>
+                <h1 className="hero-h1">Nice to meet you! I'm <span className="underline">{dev}</span>.</h1>
                 <p className="hero-blurb">
                     Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.
                 </p>
