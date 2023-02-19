@@ -20,7 +20,7 @@ function App() {
       setDev("Funny Guy")
     }
     else{
-    setDev(devName);
+    if(devName)setDev(devName);
     }
     },2000);
 
